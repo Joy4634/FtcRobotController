@@ -12,7 +12,7 @@ import com.qualcomm.robotcore.hardware.DcMotorSimple;
 import com.qualcomm.robotcore.hardware.HardwareMap;
 import com.qualcomm.robotcore.hardware.PIDCoefficients;
 
-public class CenterStageDriveBase extends DriveTrainBase
+public class CenterStageDriveBaseMain extends DriveTrainBase
 {
     @Override
     public void init(HardwareMap hardwareMap)
@@ -24,9 +24,9 @@ public class CenterStageDriveBase extends DriveTrainBase
 
         resetEncoders();
 
-//        frontRight.setDirection(DcMotorSimple.Direction.REVERSE);
-//        rearRight.setDirection(DcMotorSimple.Direction.REVERSE);
-        frontLeft.setDirection(DcMotorSimple.Direction.REVERSE);
+        frontRight.setDirection(DcMotorSimple.Direction.REVERSE);
+        rearRight.setDirection(DcMotorSimple.Direction.REVERSE);
+
 
         frontLeft.setZeroPowerBehavior(DcMotor.ZeroPowerBehavior.BRAKE);
         frontRight.setZeroPowerBehavior(DcMotor.ZeroPowerBehavior.BRAKE);
